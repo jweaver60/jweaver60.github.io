@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SOAP | Jacob Weaver]]></title>
   <link href="http://jweaver.me/blog/categories/soap/atom.xml" rel="self"/>
   <link href="http://jweaver.me/"/>
-  <updated>2014-02-18T13:41:54-05:00</updated>
+  <updated>2014-02-18T13:58:49-05:00</updated>
   <id>http://jweaver.me/</id>
   <author>
     <name><![CDATA[Jacob Weaver]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Laravel is a great framework]]></title>
-    <link href="http://jweaver.me/blog/2014/02/18/laravel-is-a-great-framework/"/>
-    <updated>2014-02-18T09:28:00-05:00</updated>
-    <id>http://jweaver.me/blog/2014/02/18/laravel-is-a-great-framework</id>
+    <link href="http://jweaver.me/blog/2014/02/16/laravel-is-a-great-framework/"/>
+    <updated>2014-02-16T09:28:00-05:00</updated>
+    <id>http://jweaver.me/blog/2014/02/16/laravel-is-a-great-framework</id>
     <content type="html"><![CDATA[<p>I recently had to work on a project that required hooking into Magento&rsquo;s SOAP API and parsing orders from an Excel spreadsheet into
 the Magento dashboard. Although Magento has a REST API, it doesn&rsquo;t seem to be nearly as capable as the SOAP API, and offers no real
 functionality other than the ability to get orders, products, and so on. Having never really worked with a SOAP API, I went to my usual

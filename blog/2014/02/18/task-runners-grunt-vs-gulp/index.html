@@ -1,24 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Jacob Weaver]]></title>
-  <link href="http://jweaver.me/atom.xml" rel="self"/>
-  <link href="http://jweaver.me/"/>
-  <updated>2014-02-18T13:58:49-05:00</updated>
-  <id>http://jweaver.me/</id>
-  <author>
-    <name><![CDATA[Jacob Weaver]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Task Runners: Grunt vs. Gulp - Jacob Weaver</title>
+  <meta name="author" content="Jacob Weaver">
 
   
-  <entry>
-    <title type="html"><![CDATA[Task Runners: Grunt vs. Gulp]]></title>
-    <link href="http://jweaver.me/blog/2014/02/18/task-runners-grunt-vs-gulp/"/>
-    <updated>2014-02-18T13:38:13-05:00</updated>
-    <id>http://jweaver.me/blog/2014/02/18/task-runners-grunt-vs-gulp</id>
-    <content type="html"><![CDATA[<p>I&rsquo;ve been a CodeKit user for a pretty long time, and while it&rsquo;s been very useful, the rise of JavaScript task runners like
+  <meta name="description" content="I&rsquo;ve been a CodeKit user for a pretty long time, and while it&rsquo;s been very useful, the rise of JavaScript task runners like
+Grunt and Gulp &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jweaver.me/blog/2014/02/18/task-runners-grunt-vs-gulp">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Jacob Weaver" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans|Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<aside class="left">
+			<div class="inner-left">
+				<header>
+					<img src="http://www.gravatar.com/avatar/d3d65c04c3bf8565fb1135b588c039d2?s=200" alt="Gravatar of Jacob Weaver " title="Gravatar of Jacob Weaver" class="profilepic" />
+<hgroup>
+  <h1><a href="/">Jacob Weaver</a></h1>
+  
+    <h2 class="subtitle">Developing things and talking about it</h2>
+   
+</hgroup>
+
+
+				</header>
+				<footer>
+					<p>
+	
+		<a href="http://github.com/jweaver60" class="btn btn-dark">GitHub</a>
+	
+	
+		<a href="http://twitter.com/jweaver60" class="btn btn-dark">Twitter</a>
+	
+</p>
+				</footer>
+			</div>
+		</aside>
+    	<section class="right">
+    		<div class="inner-right">
+    			<div id="posts">
+    			  	<article class="post">
+    
+  <header>
+    
+      <h1 class="entry-title">Task Runners: Grunt vs. Gulp</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-18T13:38:13-05:00" pubdate data-updated="true">Feb 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&rsquo;ve been a CodeKit user for a pretty long time, and while it&rsquo;s been very useful, the rise of JavaScript task runners like
 Grunt and Gulp have given me a chance to rethink how I automate my workflow. CodeKit is great for compiling SASS/LESS?CoffeeScript,
 but what it can&rsquo;t do is more project specific tasks, for example, run my tests. Thanks to Node.js, Grunt and Gulp can do everything
 CodeKit can, while also having access to the CLI which allows it to automatically run your tests and perform other tasks.</p>
@@ -101,70 +173,82 @@ What this means is that we can put all of our CSS related tasks into one, and ju
 into the destination file. The same is true for JavaScript, images or any other asset. For me, I think it&rsquo;s pretty clear that I&rsquo;ll be using Gulp
 as my default task runner for the time being. If you&rsquo;ve been using Grunt, give Gulp a try. I think you&rsquo;ll be surprised by just how much time it can
 save you.</p>
-]]></content>
-  </entry>
+</div>
+
+
+</article>
+
+
+        <div class="sharing">
   
-  <entry>
-    <title type="html"><![CDATA[Laravel is a great framework]]></title>
-    <link href="http://jweaver.me/blog/2014/02/16/laravel-is-a-great-framework/"/>
-    <updated>2014-02-16T09:28:00-05:00</updated>
-    <id>http://jweaver.me/blog/2014/02/16/laravel-is-a-great-framework</id>
-    <content type="html"><![CDATA[<p>I recently had to work on a project that required hooking into Magento&rsquo;s SOAP API and parsing orders from an Excel spreadsheet into
-the Magento dashboard. Although Magento has a REST API, it doesn&rsquo;t seem to be nearly as capable as the SOAP API, and offers no real
-functionality other than the ability to get orders, products, and so on. Having never really worked with a SOAP API, I went to my usual
-framework (Ruby on Rails) and looked for a SOAP gem. I found <a href="http://savonrb.com/">Savon</a> and thought I would give that a shot. While
-Savon works for most applications, something about the way Magento was requiring the request body to be formatted wasn&rsquo;t jiving with
-how Savon wanted to format it for me.</p>
-
-<h3>Laravel to the Rescue</h3>
-
-<hr />
-
-<p>I decided that I would have to use PHP for this, since PHP has support for SOAP built right in, and also because all of the examples
-Magento gave on their site were for PHP. Creating a soap client in PHP is as simple as:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SoapClient</span><span class="p">(</span><span class="s1">&#39;your-wsdl-here&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And from there I was able to use the Magento API as documented. Now this doesn&rsquo;t really pertain to Laravel, just PHP in general. But
-where Laravel comes in handy is the rest of the application. I&rsquo;ve attempted to learn Laravel in the past (version 3) and wasn&rsquo;t that
-into it. Maybe it was just that I wasn&rsquo;t dedicated to it, but I feel that the framework has come a long way in version 4. Routes and
-Controllers are incredibly easy to use, and setting them up in a RESTful way is very simple. For example, if you have a Post resource,
-then a simple route like this:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nx">Route</span><span class="o">::</span><span class="na">resource</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">,</span> <span class="s1">&#39;PostsController&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>will link to a controller and automatically accept standard RESTful actions:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">View</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">&#39;posts.index&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">()</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="k">return</span> <span class="nx">View</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">&#39;posts.create&#39;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and so on. This made building the rest of my application incredibly easy, and the native SOAP support in PHP was simple to use as well.
-I&rsquo;ll be using Laravel on future projects, for sure.</p>
-]]></content>
-  </entry>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jweaver.me/blog/2014/02/18/task-runners-grunt-vs-gulp/" data-via="jweaver60" data-counturl="http://jweaver.me/blog/2014/02/18/task-runners-grunt-vs-gulp/" >Tweet</a>
   
-</feed>
+  
+  
+</div>
+
+
+
+
+<section id="comments">
+    <div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+
+    			</div>
+    			<footer id="footer">
+    				<p class="credit">
+  Copyright &copy; 2014 - Jacob Weaver.
+</p>
+
+
+    			</footer>
+    			
+
+<script type="text/javascript">
+      var disqus_shortname = 'jacobweaver';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jweaver.me/blog/2014/02/18/task-runners-grunt-vs-gulp/';
+        var disqus_url = 'http://jweaver.me/blog/2014/02/18/task-runners-grunt-vs-gulp/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans|Roboto:400,300' rel='stylesheet' type='text/css'>
+
+
+
+
+
+    		</div>
+    	</section>
+  	</div>
+</body>
+</html>
