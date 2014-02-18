@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Laravel is a great framework"
-date: 2014-02-18 09:28
+date: 2014-02-16 09:28:00 -0500
 comments: true
 categories: [PHP, Laravel, SOAP]
 ---
