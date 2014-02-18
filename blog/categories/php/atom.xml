@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: php, | Jacob Weaver]]></title>
+  <title><![CDATA[Category: php | Jacob Weaver]]></title>
   <link href="http://jweaver60.github.io/blog/categories/php/atom.xml" rel="self"/>
   <link href="http://jweaver60.github.io/"/>
-  <updated>2014-02-18T12:01:37-05:00</updated>
+  <updated>2014-02-18T12:06:20-05:00</updated>
   <id>http://jweaver60.github.io/</id>
   <author>
     <name><![CDATA[Jacob Weaver]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Laravel is a great framework]]></title>
-    <link href="http://jweaver60.github.io/blog/2014/02/18/new-blog/"/>
+    <link href="http://jweaver60.github.io/blog/2014/02/18/laravel-is-a-great-framework/"/>
     <updated>2014-02-18T09:28:00-05:00</updated>
-    <id>http://jweaver60.github.io/blog/2014/02/18/new-blog</id>
+    <id>http://jweaver60.github.io/blog/2014/02/18/laravel-is-a-great-framework</id>
     <content type="html"><![CDATA[<p>I recently had to work on a project that required hooking into Magento&rsquo;s SOAP API and parsing orders from an Excel spreadsheet into
 the Magento dashboard. Although Magento has a REST API, it doesn&rsquo;t seem to be nearly as capable as the SOAP API, and offers no real
 functionality other than the ability to get orders, products, and so on. Having never really worked with a SOAP API, I went to my usual
@@ -25,7 +25,7 @@ framework (Ruby on Rails) and looked for a SOAP gem. I found <a href="http://sav
 Savon works for most applications, something about the way Magento was requiring the request body to be formatted wasn&rsquo;t jiving with
 how Savon wanted to format it for me.</p>
 
-<h4>Laravel to the Rescue</h4>
+<h3>Laravel to the Rescue</h3>
 
 <hr />
 
