@@ -3,7 +3,7 @@ layout: post
 title: "Task Runners: Grunt vs. Gulp"
 date: 2014-02-18 13:38:13 -0500
 comments: true
-categories: 
+categories: [JavaScript, Automation, Tasks]
 ---
 
 I've been a CodeKit user for a pretty long time, and while it's been very useful, the rise of JavaScript task runners like
