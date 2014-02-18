@@ -7,7 +7,7 @@ categories: [JavaScript, Automation, Tasks]
 ---
 
 I've been a CodeKit user for a pretty long time, and while it's been very useful, the rise of JavaScript task runners like
-Grunt and Gulp have given me a chance to rethink how I automate my workflow. CodeKit is great for compiling SASS/LESS?CoffeeScript,
+Grunt and Gulp have given me a chance to rethink how I automate my workflow. CodeKit is great for compiling SASS/LESS and CoffeeScript,
 but what it can't do is more project specific tasks, for example, run my tests. Thanks to Node.js, Grunt and Gulp can do everything
 CodeKit can, while also having access to the CLI which allows it to automatically run your tests and perform other tasks. 
 
