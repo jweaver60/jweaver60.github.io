@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 	  mincss: {
    		'myproject': {
       	files: {
-        	'build/cssoutput.min.css': [ 'src/css/file1.css', 'src/css/file2.css' ]
+        	'build/app.min.css': [ 'main.css', 'widgets.css' ]
       	}
     	}
   	},
