@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SOAP | Jacob Weaver]]></title>
   <link href="http://jweaver.me/blog/categories/soap/atom.xml" rel="self"/>
   <link href="http://jweaver.me/"/>
-  <updated>2014-02-18T14:00:11-05:00</updated>
+  <updated>2014-02-18T14:11:19-05:00</updated>
   <id>http://jweaver.me/</id>
   <author>
     <name><![CDATA[Jacob Weaver]]></name>
@@ -20,7 +20,12 @@
     <id>http://jweaver.me/blog/2014/02/16/laravel-is-a-great-framework</id>
     <content type="html"><![CDATA[<p>I recently had to work on a project that required hooking into Magento&rsquo;s SOAP API and parsing orders from an Excel spreadsheet into
 the Magento dashboard. Although Magento has a REST API, it doesn&rsquo;t seem to be nearly as capable as the SOAP API, and offers no real
-functionality other than the ability to get orders, products, and so on. Having never really worked with a SOAP API, I went to my usual
+functionality other than the ability to get orders, products, and so on.</p>
+
+<!--more-->
+
+
+<p>Having never really worked with a SOAP API, I went to my usual
 framework (Ruby on Rails) and looked for a SOAP gem. I found <a href="http://savonrb.com/">Savon</a> and thought I would give that a shot. While
 Savon works for most applications, something about the way Magento was requiring the request body to be formatted wasn&rsquo;t jiving with
 how Savon wanted to format it for me.</p>
