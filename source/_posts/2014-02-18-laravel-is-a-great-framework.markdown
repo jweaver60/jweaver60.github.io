@@ -20,3 +20,25 @@ Magento gave on their site were for PHP. Creating a soap client in PHP is as sim
 ``` php
 $client = new SoapClient('your-wsdl-here');
 ```
+And from there I was able to use the Magento API as documented. Now this doesn't really pertain to Laravel, just PHP in general. But 
+where Laravel comes in handy is the rest of the application. I've attempted to learn Laravel in the past (version 3) and wasn't that
+into it. Maybe it was just that I wasn't dedicated to it, but I feel that the framework has come a long way in version 4. Routes and 
+Controllers are incredibly easy to use, and setting them up in a RESTful way is very simple. For example, if you have a Post resource,
+then a simple route like this:
+```php
+Route::resource('posts', 'PostsController');
+```
+will link to a controller and automatically accept standard RESTful actions:
+```php
+public function index()
+{
+	return View::make('posts.index');
+}
+
+public function create()
+{
+	return View::make('posts.create');
+}
+```
+and so on. This made building the rest of my application incredibly easy, and the native SOAP support in PHP was simple to use as well.
+I'll be using Laravel on future projects, for sure.
