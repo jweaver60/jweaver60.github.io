@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://jweaver60.github.io/blog/2014/02/18/laravel-is-a-great-framework/</loc>
+        <loc>http://jweaver.me/blog/2014/02/18/laravel-is-a-great-framework/</loc>
         <lastmod>2014-02-18T12:38:21-05:00</lastmod>
     </url>
     <url>
-        <loc>http://jweaver60.github.io/404.html</loc>
+        <loc>http://jweaver.me/404.html</loc>
         <lastmod>2014-02-18T11:30:50-05:00</lastmod>
     </url>
     <url>
-        <loc>http://jweaver60.github.io/blog/archives/</loc>
+        <loc>http://jweaver.me/blog/archives/</loc>
         <lastmod>2014-02-18T12:38:21-05:00</lastmod>
     </url>
     <url>
-        <loc>http://jweaver60.github.io/blog/</loc>
+        <loc>http://jweaver.me/blog/</loc>
         <lastmod>2014-02-18T12:38:21-05:00</lastmod>
     </url>
     <url>
-        <loc>http://jweaver60.github.io/</loc>
+        <loc>http://jweaver.me/</loc>
         <lastmod>2014-02-18T12:38:21-05:00</lastmod>
     </url>
     <url>
-        <loc>http://jweaver60.github.io/robots.txt</loc>
+        <loc>http://jweaver.me/robots.txt</loc>
         <lastmod>2014-02-18T11:19:08-05:00</lastmod>
     </url>
 </urlset>
