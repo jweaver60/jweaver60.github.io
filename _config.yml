@@ -72,6 +72,9 @@ github_skip_forks: true
 twitter_user: jweaver60
 twitter_tweet_button: true
 
+# Gravatar
+gravatar_email: jweaver60@gmail.com
+
 # Google +1
 google_plus_one: false
 google_plus_one_size: medium
