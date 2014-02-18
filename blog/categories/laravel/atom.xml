@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Jacob Weaver]]></title>
-  <link href="http://jweaver60.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: laravel, | Jacob Weaver]]></title>
+  <link href="http://jweaver60.github.io/blog/categories/laravel/atom.xml" rel="self"/>
   <link href="http://jweaver60.github.io/"/>
   <updated>2014-02-18T12:01:37-05:00</updated>
   <id>http://jweaver60.github.io/</id>
@@ -30,24 +30,10 @@ how Savon wanted to format it for me.</p>
 <hr />
 
 <p>I decided that I would have to use PHP for this, since PHP has support for SOAP built right in, and also because all of the examples
-Magento gave on their site were for PHP. Creating a soap client in PHP is as simple as:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SoapClient</span><span class="p">(</span><span class="s1">&#39;your-wsdl-here&#39;</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tywin Lannister Quote]]></title>
-    <link href="http://jweaver60.github.io/blog/2013/06/15/tywin-lannister-quote/"/>
-    <updated>2013-06-15T09:28:00-04:00</updated>
-    <id>http://jweaver60.github.io/blog/2013/06/15/tywin-lannister-quote</id>
-    <content type="html"><![CDATA[<p>A nice quote by Tywin Lannister taken from <em>A Storm of Sword</em> book.</p>
-
-<blockquote><p>The greatest fools are ofttimes more clever then the men who laugh at them.</p><footer><strong>Tywin Lannister</strong> <cite>A Storm of Swords</cite></footer></blockquote>
-
+Magento gave on their site were for PHP. Creating a soap client in PHP is as simple as:
+<code>php
+$client = new SoapClient('your-wsdl-here');
+</code></p>
 ]]></content>
   </entry>
   

@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>New Blog - Jacob Weaver</title>
+  <title>Laravel is a great framework - Jacob Weaver</title>
   <meta name="author" content="Jacob Weaver">
 
   
-  <meta name="description" content="I&rsquo;m going to start writing to this blog.
-">
+  <meta name="description" content="I recently had to work on a project that required hooking into Magento&rsquo;s SOAP API and parsing orders from an Excel spreadsheet into
+the Magento &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -42,7 +42,7 @@
 <hgroup>
   <h1><a href="/">Jacob Weaver</a></h1>
   
-    <h2 class="subtitle">Developing things</h2>
+    <h2 class="subtitle">Developing things and talking about it</h2>
    
 </hgroup>
 
@@ -67,7 +67,7 @@
     
   <header>
     
-      <h1 class="entry-title">New Blog</h1>
+      <h1 class="entry-title">Laravel Is a Great Framework</h1>
     
     
       <p class="meta">
@@ -90,7 +90,24 @@
   </header>
 
 
-<div class="entry-content"><p>I&rsquo;m going to start writing to this blog.</p>
+<div class="entry-content"><p>I recently had to work on a project that required hooking into Magento&rsquo;s SOAP API and parsing orders from an Excel spreadsheet into
+the Magento dashboard. Although Magento has a REST API, it doesn&rsquo;t seem to be nearly as capable as the SOAP API, and offers no real
+functionality other than the ability to get orders, products, and so on. Having never really worked with a SOAP API, I went to my usual
+framework (Ruby on Rails) and looked for a SOAP gem. I found <a href="http://savonrb.com/">Savon</a> and thought I would give that a shot. While
+Savon works for most applications, something about the way Magento was requiring the request body to be formatted wasn&rsquo;t jiving with
+how Savon wanted to format it for me.</p>
+
+<h4>Laravel to the Rescue</h4>
+
+<hr />
+
+<p>I decided that I would have to use PHP for this, since PHP has support for SOAP built right in, and also because all of the examples
+Magento gave on their site were for PHP. Creating a soap client in PHP is as simple as:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SoapClient</span><span class="p">(</span><span class="s1">&#39;your-wsdl-here&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
