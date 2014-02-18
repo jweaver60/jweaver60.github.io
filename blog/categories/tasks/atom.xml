@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tasks | Jacob Weaver]]></title>
+  <link href="http://jweaver.me/blog/categories/tasks/atom.xml" rel="self"/>
+  <link href="http://jweaver.me/"/>
+  <updated>2014-02-18T14:00:11-05:00</updated>
+  <id>http://jweaver.me/</id>
+  <author>
+    <name><![CDATA[Jacob Weaver]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Task Runners: Grunt vs. Gulp]]></title>
+    <link href="http://jweaver.me/blog/2014/02/18/task-runners-grunt-vs-gulp/"/>
+    <updated>2014-02-18T13:38:13-05:00</updated>
+    <id>http://jweaver.me/blog/2014/02/18/task-runners-grunt-vs-gulp</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been a CodeKit user for a pretty long time, and while it&rsquo;s been very useful, the rise of JavaScript task runners like
+Grunt and Gulp have given me a chance to rethink how I automate my workflow. CodeKit is great for compiling SASS/LESS?CoffeeScript,
+but what it can&rsquo;t do is more project specific tasks, for example, run my tests. Thanks to Node.js, Grunt and Gulp can do everything
+CodeKit can, while also having access to the CLI which allows it to automatically run your tests and perform other tasks.</p>
+
+<p>So that begs the question, Grunt or Gulp? I used Grunt for a while and didn&rsquo;t really see a need to use anything else, it got the
+job done. But after I took some time to dig into Gulp, I realized that it was equally powerful but with a much cleaner, more precise
+syntax for doing the same things. Let&rsquo;s take the same task, compiling SASS, minifying and concatenating it. In Grunt, that would look
+something like this:
+``` javascript
+module.exports = function(grunt) {</p>
+
+<pre><code>grunt.initConfig({
+  sass: {
+    dist: {
+      options: {
+        style: 'expanded'
+      },
+      files: {
+        'main.css': 'main.scss',
+        'widgets.css': 'widgets.scss'
+      }
+    }
+  }
+  mincss: {
+    'myproject': {
+    files: {
+        'build/cssoutput.min.css': [ 'src/css/file1.css', 'src/css/file2.css' ]
+    }
+    }
+},
+});
+</code></pre>
+
+<p>};
+<code>
+Not bad, but look at how much cleaner all of this can be in Gulp:
+</code> javascript
+gulp.task(&lsquo;css&rsquo;, function() {</p>
+
+<pre><code>return gulp.src('assets/styles/scss/app.scss')
+    .pipe(sass())
+    .pipe(minifycss())
+    .pipe(gulp.dest('assets/styles/min'));
+</code></pre>
+
+<p>});
+<code>``
+That's substantially shorter, but how? The answer is in that</code>.pipe` method, which allows you to send the result of one task into another.
+What this means is that we can put all of our CSS related tasks into one, and just pipe the result of sass compiling into minifying, then minifying
+into the destination file. The same is true for JavaScript, images or any other asset. For me, I think it&rsquo;s pretty clear that I&rsquo;ll be using Gulp
+as my default task runner for the time being. If you&rsquo;ve been using Grunt, give Gulp a try. I think you&rsquo;ll be surprised by just how much time it can
+save you.</p>
+]]></content>
+  </entry>
+  
+</feed>
