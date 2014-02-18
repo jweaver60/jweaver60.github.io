@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SOAP | Jacob Weaver]]></title>
   <link href="http://jweaver60.github.io/blog/categories/soap/atom.xml" rel="self"/>
   <link href="http://jweaver60.github.io/"/>
-  <updated>2014-02-18T12:31:39-05:00</updated>
+  <updated>2014-02-18T12:38:28-05:00</updated>
   <id>http://jweaver60.github.io/</id>
   <author>
     <name><![CDATA[Jacob Weaver]]></name>
@@ -33,7 +33,35 @@ how Savon wanted to format it for me.</p>
 Magento gave on their site were for PHP. Creating a soap client in PHP is as simple as:
 <code>php
 $client = new SoapClient('your-wsdl-here');
-</code></p>
+</code>
+And from there I was able to use the Magento API as documented. Now this doesn&rsquo;t really pertain to Laravel, just PHP in general. But
+where Laravel comes in handy is the rest of the application. I&rsquo;ve attempted to learn Laravel in the past (version 3) and wasn&rsquo;t that
+into it. Maybe it was just that I wasn&rsquo;t dedicated to it, but I feel that the framework has come a long way in version 4. Routes and
+Controllers are incredibly easy to use, and setting them up in a RESTful way is very simple. For example, if you have a Post resource,
+then a simple route like this:
+<code>php
+Route::resource('posts', 'PostsController');
+</code>
+will link to a controller and automatically accept standard RESTful actions:
+```php
+public function index()
+{</p>
+
+<pre><code>return View::make('posts.index');
+</code></pre>
+
+<p>}</p>
+
+<p>public function create()
+{</p>
+
+<pre><code>return View::make('posts.create');
+</code></pre>
+
+<p>}
+```
+and so on. This made building the rest of my application incredibly easy, and the native SOAP support in PHP was simple to use as well.
+I&rsquo;ll be using Laravel on future projects, for sure.</p>
 ]]></content>
   </entry>
   

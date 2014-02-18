@@ -108,6 +108,43 @@ Magento gave on their site were for PHP. Creating a soap client in PHP is as sim
 </pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SoapClient</span><span class="p">(</span><span class="s1">&#39;your-wsdl-here&#39;</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>And from there I was able to use the Magento API as documented. Now this doesn&rsquo;t really pertain to Laravel, just PHP in general. But
+where Laravel comes in handy is the rest of the application. I&rsquo;ve attempted to learn Laravel in the past (version 3) and wasn&rsquo;t that
+into it. Maybe it was just that I wasn&rsquo;t dedicated to it, but I feel that the framework has come a long way in version 4. Routes and
+Controllers are incredibly easy to use, and setting them up in a RESTful way is very simple. For example, if you have a Post resource,
+then a simple route like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="nx">Route</span><span class="o">::</span><span class="na">resource</span><span class="p">(</span><span class="s1">&#39;posts&#39;</span><span class="p">,</span> <span class="s1">&#39;PostsController&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>will link to a controller and automatically accept standard RESTful actions:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">View</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">&#39;posts.index&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">()</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">View</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">&#39;posts.create&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and so on. This made building the rest of my application incredibly easy, and the native SOAP support in PHP was simple to use as well.
+I&rsquo;ll be using Laravel on future projects, for sure.</p>
 </div>
 
 
