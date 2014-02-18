@@ -1,9 +1,0 @@
----
-layout: post
-title: "New Blog"
-date: 2014-02-18 09:28
-comments: true
-categories: dev
----
-
-I'm going to start writing to this blog.
