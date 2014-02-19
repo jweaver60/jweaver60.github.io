@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | Jacob Weaver]]></title>
   <link href="http://jweaver.me/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://jweaver.me/"/>
-  <updated>2014-02-19T10:31:34-05:00</updated>
+  <updated>2014-02-19T10:45:27-05:00</updated>
   <id>http://jweaver.me/</id>
   <author>
     <name><![CDATA[Jacob Weaver]]></name>
@@ -12,6 +12,75 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Basic Gulp Setup]]></title>
+    <link href="http://jweaver.me/blog/2014/02/19/basic-gulp-file/"/>
+    <updated>2014-02-19T10:23:33-05:00</updated>
+    <id>http://jweaver.me/blog/2014/02/19/basic-gulp-file</id>
+    <content type="html"><![CDATA[<p><a href="http://www.gulpjs.com">Gulp</a> is a JavaScript task runner designed to automate repetitive tasks in your development workflow, so you can focus on the important things in your app. Gulp is very flexible, but for most of us, there are some things we use in almost all of our projects. Personally, I&rsquo;m always going to use SCSS, minify and lint my JS, and optimize images. To make that easier, I have a basic Gulp file that I use for my projects. This lets me get up and running even more quickly. I thought I&rsquo;d share this with you. Tweak it to your own preferences and workflow, and if you have anything to add let me know!</p>
+
+<!--more-->
+
+
+<p>First, make sure you have gulp installed globally. Gulp requires <a href="http://www.nodejs.org">Node.js</a>, so if you don&rsquo;t have that install it first. It&rsquo;s easy to install, Mac users can even use Homebrew:</p>
+
+<p><code>brew install node</code></p>
+
+<p>And then:</p>
+
+<p><code>npm install -g gulp</code></p>
+
+<p>This will install the gulp CLI tool and all of it&rsquo;s dependencies globally.</p>
+
+<p>Next, create a <code>package.json</code> file in the root of your project directory. It should look something like this:
+``` json
+{
+  &ldquo;title&rdquo;: &ldquo;Your Title&rdquo;,
+  &ldquo;devDependencies&rdquo;: {</p>
+
+<pre><code>"gulp": "~3.5.1",
+"gulp-minify-css": "~0.2.0",
+"gulp-sass": "~0.6.0"
+</code></pre>
+
+<p>  }
+}
+<code>
+Now run `npm install` from your project directory. After that you can create your `gulpfile.js`, or copy this one:
+</code> javascript
+var gulp = require(&lsquo;gulp&rsquo;);
+var minifycss = require(&lsquo;gulp-minify-css&rsquo;);
+var sass = require(&lsquo;gulp-sass&rsquo;);</p>
+
+<p>gulp.task(&lsquo;css&rsquo;, function() {</p>
+
+<pre><code>return gulp.src('assets/styles/scss/app.scss')
+    .pipe(sass())
+    .pipe(minifycss())
+    .pipe(gulp.dest('assets/styles/min'));
+</code></pre>
+
+<p>});</p>
+
+<p>gulp.task(&lsquo;js&rsquo;, function() {</p>
+
+<pre><code>return gulp.src(['assets/libs/foundation/js/foundation.min.js', 'assets/libs/moment/min/moment.min.js'])
+    .pipe(gulp.dest('assets/js'));
+</code></pre>
+
+<p>});</p>
+
+<p>gulp.task(&lsquo;default&rsquo;, function() {</p>
+
+<pre><code>gulp.watch('assets/styles/scss/*.scss', ['css']);
+</code></pre>
+
+<p>});
+```
+This is a simple setup, designed to watch and compile SCSS files, as well as copy over any necessary packages installed from Bower. Obviously, change your paths to match your project structure.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Task Runners: Grunt vs. Gulp]]></title>
