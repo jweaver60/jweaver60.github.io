@@ -4,7 +4,7 @@
   <title><![CDATA[Jacob Weaver]]></title>
   <link href="http://jweaver.me/atom.xml" rel="self"/>
   <link href="http://jweaver.me/"/>
-  <updated>2014-02-18T15:07:08-05:00</updated>
+  <updated>2014-02-19T10:31:34-05:00</updated>
   <id>http://jweaver.me/</id>
   <author>
     <name><![CDATA[Jacob Weaver]]></name>
@@ -12,6 +12,94 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Basic Gulp Setup]]></title>
+    <link href="http://jweaver.me/blog/2014/02/19/basic-gulp-file/"/>
+    <updated>2014-02-19T10:23:33-05:00</updated>
+    <id>http://jweaver.me/blog/2014/02/19/basic-gulp-file</id>
+    <content type="html"><![CDATA[<p><a href="http://www.gulpjs.com">Gulp</a> is a JavaScript task runner designed to automate repetitive tasks in your development workflow, so you can focus on the important things in your app. Gulp is very flexible, but for most of us, there are some things we use in almost all of our projects. Personally, I&rsquo;m always going to use SCSS, minify and lint my JS, and optimize images. To make that easier, I have a basic Gulp file that I use for my projects. This lets me get up and running even more quickly. I thought I&rsquo;d share this with you. Tweak it to your own preferences and workflow, and if you have anything to add let me know!</p>
+
+<!--more-->
+
+
+<p>First, make sure you have gulp installed globally. Gulp requires <a href="http://www.nodejs.org">Node.js</a>, so if you don&rsquo;t have that install it first. It&rsquo;s easy to install, Mac users can even use Homebrew:</p>
+
+<p><code>brew install node</code></p>
+
+<p>And then:</p>
+
+<p><code>npm install -g gulp</code></p>
+
+<p>This will install the gulp CLI tool and all of it&rsquo;s dependencies globally.</p>
+
+<p>Next, create a <code>package.json</code> file in the root of your project directory. It should look something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Your Title&quot;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nt">&quot;devDependencies&quot;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nt">&quot;gulp&quot;</span><span class="p">:</span> <span class="s2">&quot;~3.5.1&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nt">&quot;gulp-minify-css&quot;</span><span class="p">:</span> <span class="s2">&quot;~0.2.0&quot;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nt">&quot;gulp-sass&quot;</span><span class="p">:</span> <span class="s2">&quot;~0.6.0&quot;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now run <code>npm install</code> from your project directory. After that you can create your <code>gulpfile.js</code>, or copy this one:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">minifycss</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-minify-css&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">sass</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-sass&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;css&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="s1">&#39;assets/styles/scss/app.scss&#39;</span><span class="p">)</span>
+</span><span class='line'>      <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">sass</span><span class="p">())</span>
+</span><span class='line'>      <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">minifycss</span><span class="p">())</span>
+</span><span class='line'>      <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="s1">&#39;assets/styles/min&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">([</span><span class="s1">&#39;assets/libs/foundation/js/foundation.min.js&#39;</span><span class="p">,</span> <span class="s1">&#39;assets/libs/moment/min/moment.min.js&#39;</span><span class="p">])</span>
+</span><span class='line'>      <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="s1">&#39;assets/js&#39;</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">gulp</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="s1">&#39;assets/styles/scss/*.scss&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;css&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is a simple setup, designed to watch and compile SCSS files, as well as copy over any necessary packages installed from Bower. Obviously, change your paths to match your project structure.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Task Runners: Grunt vs. Gulp]]></title>
