@@ -3,7 +3,7 @@ layout: post
 title: "Basic Gulp Setup"
 date: 2014-02-19 10:23:33 -0500
 comments: true
-categories: 
+categories: [JavaScript, Automation, Tasks] 
 ---
 
 [Gulp](http://www.gulpjs.com) is a JavaScript task runner designed to automate repetitive tasks in your development workflow, so you can focus on the important things in your app. Gulp is very flexible, but for most of us, there are some things we use in almost all of our projects. Personally, I'm always going to use SCSS, minify and lint my JS, and optimize images. To make that easier, I have a basic Gulp file that I use for my projects. This lets me get up and running even more quickly. I thought I'd share this with you. Tweak it to your own preferences and workflow, and if you have anything to add let me know!
