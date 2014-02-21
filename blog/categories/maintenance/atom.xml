@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Maintenance | Jacob Weaver]]></title>
   <link href="http://jweaver.me/blog/categories/maintenance/atom.xml" rel="self"/>
   <link href="http://jweaver.me/"/>
-  <updated>2014-02-21T18:12:52-05:00</updated>
+  <updated>2014-02-21T18:14:24-05:00</updated>
   <id>http://jweaver.me/</id>
   <author>
     <name><![CDATA[Jacob Weaver]]></name>
@@ -18,7 +18,7 @@
     <link href="http://jweaver.me/blog/2014/02/21/keeping-a-clean-system/"/>
     <updated>2014-02-21T17:55:31-05:00</updated>
     <id>http://jweaver.me/blog/2014/02/21/keeping-a-clean-system</id>
-    <content type="html"><![CDATA[<p>In the process of development, we often end up with a lot of tools on or systems. We install different databases, shells, languages, version control systems, etc. After a while it can be pretty hard to keep up with what&rsquo;s on your system and where, and also what needs to be updated. I wanted to share my method for keeping things up-to-date as simply as possible.</p>
+    <content type="html"><![CDATA[<p>In the process of development, we often end up with a lot of tools on our systems. We install different databases, shells, languages, version control systems, etc. After a while it can be pretty hard to keep up with what&rsquo;s on your system and where, and also what needs to be updated. I wanted to share my method for keeping things up-to-date as simply as possible.</p>
 
 <!-- more -->
 
