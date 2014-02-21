@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Shell | Jacob Weaver]]></title>
+  <link href="http://jweaver.me/blog/categories/shell/atom.xml" rel="self"/>
+  <link href="http://jweaver.me/"/>
+  <updated>2014-02-21T18:12:52-05:00</updated>
+  <id>http://jweaver.me/</id>
+  <author>
+    <name><![CDATA[Jacob Weaver]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Keeping a Clean System]]></title>
+    <link href="http://jweaver.me/blog/2014/02/21/keeping-a-clean-system/"/>
+    <updated>2014-02-21T17:55:31-05:00</updated>
+    <id>http://jweaver.me/blog/2014/02/21/keeping-a-clean-system</id>
+    <content type="html"><![CDATA[<p>In the process of development, we often end up with a lot of tools on or systems. We install different databases, shells, languages, version control systems, etc. After a while it can be pretty hard to keep up with what&rsquo;s on your system and where, and also what needs to be updated. I wanted to share my method for keeping things up-to-date as simply as possible.</p>
+
+<!-- more -->
+
+
+<p>The first thing you need to do if you&rsquo;re on OS X and not already doing it, is install everything you possibly can through <a href="http://brew.sh/">homebrew</a>. I use it to install mysql, postgres, git, php, node.js, mongodb, vim, zsh and a bunch of other things. Homebrew does a lot of things for you, installing packages in a single directory and automatically loading them in your PATH (provided you have the homebrew directory in your PATH). The only thing I don&rsquo;t install with homebrew is ruby (there&rsquo;s <a href="http://www.rvm.io">RVM</a> for that). Even if your system already comes with some of these things, installing them with homebrew makes sure you have the latest versions. Homebrew also updates all of your packages with a single command, so you don&rsquo;t have to track these down individually and run multiple updates. If there&rsquo;s an update, homebrew gets it extremely quickly and you&rsquo;ll be up and running with the latest in no time.</p>
+
+<p>I make a habit to update all of my packages every morning when I start work, and to make it even easier I wrote a quick shell script to get everything done in one command. Modify this as you see fit.</p>
+
+<p>``` bash
+goodmorning() {</p>
+
+<pre><code>echo "updating packages"
+brew update
+echo "updating any packages"
+brew upgrade
+echo "cleaning up old packages"
+brew cleanup
+echo "checking homebrew for errors"
+brew doctor
+echo "All good!"
+cd ~/.vim/autoload
+echo "updating pathogen"
+curl -O https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+echo "Pathogen updated!"
+for i in `ls` do
+    cd "$i"
+    echo "updating $i"
+    git pull
+    cd ..
+done
+cd ~
+echo "updating RVM"
+rvm get stable
+echo "cleaning up RVM"
+rvm cleanup all
+echo "Good to go!"
+</code></pre>
+
+<p>}
+```
+I hope this is helpful for you, if so, or if you&rsquo;d like to change anything, let me know!</p>
+]]></content>
+  </entry>
+  
+</feed>
