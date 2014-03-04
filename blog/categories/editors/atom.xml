@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: javascript | Jacob Weaver]]></title>
-  <link href="http://jweaver.me/blog/categories/javascript/atom.xml" rel="self"/>
+  <title><![CDATA[Category: editors | Jacob Weaver]]></title>
+  <link href="http://jweaver.me/blog/categories/editors/atom.xml" rel="self"/>
   <link href="http://jweaver.me/"/>
   <updated>2014-03-03T19:02:04-05:00</updated>
   <id>http://jweaver.me/</id>
